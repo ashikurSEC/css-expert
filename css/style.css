@@ -321,12 +321,12 @@ a {
 
 }
 
-.card_header,
+.card__header,
 .card_body {
     padding: 2rem 3rem;
 }
 
-.card--secondary .card_header {
+.card--secondary .card__header {
     background: var(--color-secondary);
     color: #fff;
 }
@@ -365,6 +365,19 @@ a {
 
 .plan .list__item {
     margin-bottom: 2rem;
+}
+
+.plan--popular .card__header {
+    position: relative;
+}
+
+.plan--popular .card__header::before {
+    content: url('../img/popular.svg');
+    width: 40px;
+    display: inline-block;
+    position: absolute;
+    top: -6px;
+    right: 5%;
 }
 
 @media screen  and (min-width: 1024px) {
