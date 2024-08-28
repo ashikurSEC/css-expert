@@ -191,6 +191,19 @@ a {
     border-radius: 100%;
 }
 
+.icon-container--secondary {
+    background: var(--color-secondary);
+}
+
+.icon--white {
+    fill: #fff;
+}
+
+.icon--small {
+    width: 30px;
+    height: 30px;
+}
+
 /* ----- - Button - ----- */
 
 .btn {
@@ -491,49 +504,56 @@ a {
 
 .grid {
     display: grid;
-    gap: 10px;
   }
 
-  @media screen and (min-width: 480px) {
-    .grid--1x6{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-  }
-
-  @media screen and (min-width: 568px) {
-    .grid--1x6{
-        grid-template-columns: repeat(2, 1fr);
-    }    
-  }
-
-  @media screen and (min-width: 600px) {
-    .grid--1x6{
-        grid-template-columns: repeat(4, 1fr);
-    }
-  }
 
   
   @media screen and (min-width: 768px) {
-    .grid--1x6 {
-      grid-template-columns: repeat(4, 1fr);
+    .grid--1x2 {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  @media screen and (min-width: 992px) {
-    .grid--1x6 {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
   
   @media screen and (min-width: 1024px) {
-    .grid--1x6 {
-      grid-template-columns: repeat(4, 1fr);
+    .grid--1x3 {
+      grid-template-columns: repeat(3, 1fr);
     }
      
   }
 
    
+/* ------ - Testimonial - ------ */
 
 
-  
+.testimonial {
+    padding: 3rem;
+}
+
+.testimonial__image {
+    position: relative;
+}
+
+
+.testimonial__image > img {
+    width: 100%;
+}
+
+
+.testimonial__image > .icon-container {
+    position: absolute;
+    top: 3rem;
+    right: -32px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .testimonial .quote,
+    .testimonial .quote__author {
+        font-size: 2.4rem;
+    }
+
+    .testimonial .quote {
+        margin-left: 6rem;
+    }
+}    
